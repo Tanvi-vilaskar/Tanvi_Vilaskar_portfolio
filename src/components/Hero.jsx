@@ -82,7 +82,7 @@ export default function Hero() {
         .hero-bg-image {
           position: absolute;
           inset: 0;
-          background-image: url('/banner.jpg');
+          background-image: url('./banner.jpg');
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center 30%;
@@ -549,7 +549,7 @@ export default function Hero() {
             >
               <div className="hero-photo-frame">
                 <img
-                  src="/profile4.jpg"
+                  src="./profile4.jpg"
                   alt="Tanvi Vilaskar"
                   className="hero-photo"
                 />
