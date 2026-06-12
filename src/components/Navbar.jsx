@@ -14,6 +14,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const handleNavClick = (id) => {
+    setOpen(false);
+
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    }, 250);
+  };
+
   return (
     <motion.nav
       initial={{ y: -80 }}
@@ -42,8 +56,18 @@ export default function Navbar() {
           height: 64,
         }}
       >
-        {/* Logo */}
-        <a href="#hero" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <button
+          onClick={() => handleNavClick('hero')}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
+            background: 'transparent',
+            border: 'none',
+            cursor: 'pointer',
+            padding: 0,
+          }}
+        >
           <div
             style={{
               width: 36,
@@ -74,29 +98,32 @@ export default function Navbar() {
           >
             Tanvi Vilaskar
           </span>
-        </a>
+        </button>
 
-        {/* Desktop links */}
         <div
           style={{ display: 'flex', gap: 32, alignItems: 'center' }}
           className="nav-desktop"
         >
           {links.map((link) => (
-            <a
+            <button
               key={link}
-              href={`#${link.toLowerCase()}`}
+              onClick={() => handleNavClick(link.toLowerCase())}
               style={{
                 fontSize: 13,
                 fontWeight: 500,
                 color: 'rgba(255,255,255,0.75)',
                 letterSpacing: 0.5,
                 transition: 'color 0.2s',
+                background: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+                padding: 0,
               }}
               onMouseEnter={(e) => (e.target.style.color = '#1aa89a')}
               onMouseLeave={(e) => (e.target.style.color = 'rgba(255,255,255,0.75)')}
             >
               {link}
-            </a>
+            </button>
           ))}
 
           <a
@@ -114,13 +141,13 @@ export default function Navbar() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: 8,
+              textDecoration: 'none',
             }}
           >
             Resume <IconArrowDown size={13} color="white" />
           </a>
         </div>
 
-        {/* Mobile hamburger */}
         <button
           onClick={() => setOpen(!open)}
           className="nav-mobile-btn"
@@ -130,7 +157,9 @@ export default function Navbar() {
             color: 'white',
             cursor: 'pointer',
             display: 'none',
+            padding: 0,
           }}
+          aria-label="Toggle menu"
         >
           <div
             style={{
@@ -164,7 +193,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -178,20 +206,24 @@ export default function Navbar() {
             }}
           >
             {links.map((link) => (
-              <a
+              <button
                 key={link}
-                href={`#${link.toLowerCase()}`}
-                onClick={() => setOpen(false)}
+                onClick={() => handleNavClick(link.toLowerCase())}
                 style={{
                   display: 'block',
+                  width: '100%',
+                  textAlign: 'left',
                   padding: '10px 0',
                   color: 'rgba(255,255,255,0.8)',
                   fontSize: 15,
+                  border: 'none',
+                  background: 'transparent',
                   borderBottom: '1px solid rgba(255,255,255,0.06)',
+                  cursor: 'pointer',
                 }}
               >
                 {link}
-              </a>
+              </button>
             ))}
 
             <a
@@ -212,6 +244,7 @@ export default function Navbar() {
                 fontSize: 14,
                 fontWeight: 600,
                 letterSpacing: 0.5,
+                textDecoration: 'none',
               }}
             >
               Resume <IconArrowDown size={14} color="white" />
@@ -221,6 +254,15 @@ export default function Navbar() {
       </AnimatePresence>
 
       <style>{`
+        html {
+          scroll-behavior: smooth;
+          scroll-padding-top: 90px;
+        }
+
+        section {
+          scroll-margin-top: 90px;
+        }
+
         @media (max-width: 768px) {
           .nav-desktop { display: none !important; }
           .nav-mobile-btn { display: block !important; }
