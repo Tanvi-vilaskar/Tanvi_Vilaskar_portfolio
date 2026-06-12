@@ -2,6 +2,7 @@
   "name": "tanvi-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tanvi-vilaskar.github.io/Tanvi_Vilaskar_portfolio",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -17,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && if exist docs rmdir /s /q docs && mkdir docs && xcopy build\\* docs\\ /E /H /C /I /Y",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
