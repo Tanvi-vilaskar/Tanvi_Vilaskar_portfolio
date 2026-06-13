@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Tanvi_Vilaskar_portfolio/static/css/main.fdcea4e7.css",
-    "main.js": "/Tanvi_Vilaskar_portfolio/static/js/main.e6384bc8.js",
+    "main.js": "/Tanvi_Vilaskar_portfolio/static/js/main.581faffd.js",
     "index.html": "/Tanvi_Vilaskar_portfolio/index.html",
     "main.fdcea4e7.css.map": "/Tanvi_Vilaskar_portfolio/static/css/main.fdcea4e7.css.map",
-    "main.e6384bc8.js.map": "/Tanvi_Vilaskar_portfolio/static/js/main.e6384bc8.js.map"
+    "main.581faffd.js.map": "/Tanvi_Vilaskar_portfolio/static/js/main.581faffd.js.map"
   },
   "entrypoints": [
     "static/css/main.fdcea4e7.css",
-    "static/js/main.e6384bc8.js"
+    "static/js/main.581faffd.js"
   ]
 }

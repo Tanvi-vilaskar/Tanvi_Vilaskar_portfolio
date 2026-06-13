@@ -3,7 +3,7 @@ export const personal = {
   tagline: "Flow like the waves — quiet, steady, and unstoppable",
   subtitle: "ML Engineer · Mainframe DevOps · Full Stack Developer",
   summary:
-    "Final-year B.Tech IT student (CGPA: 9.15/10) with hands-on expertise in Machine Learning, DevOps, and Mainframe systems. Hackathon winner and IEEE Best Paper awardee with experience building end-to-end intelligent systems — from ML pipelines and CI/CD automation to COBOL-based enterprise solutions on z/OS.",
+    "Final-year B.Tech IT student with hands-on expertise in Machine Learning, DevOps, and Mainframe systems. Hackathon winner and IEEE Best Paper awardee with experience building end-to-end intelligent systems — from ML pipelines and CI/CD automation to COBOL-based enterprise solutions on z/OS.",
   email: "tanvilaskar01@gmail.com",
   phone: "+91-93090-85300",
   location: "Pune, India",

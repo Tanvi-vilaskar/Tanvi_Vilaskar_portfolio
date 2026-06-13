@@ -108,7 +108,7 @@ export default function Contact() {
           onMouseEnter={e => { e.target.style.transform = 'translateY(-3px)'; e.target.style.boxShadow = '0 12px 40px rgba(26,168,154,0.45)'; }}
           onMouseLeave={e => { e.target.style.transform = 'none'; e.target.style.boxShadow = '0 6px 30px rgba(26,168,154,0.3)'; }}
         >
-          Say Hello
+          Let's Create Waves
         </motion.a>
       </div>
 
