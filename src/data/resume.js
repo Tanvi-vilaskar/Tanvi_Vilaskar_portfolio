@@ -7,7 +7,7 @@ export const personal = {
   email: "tanvilaskar01@gmail.com",
   phone: "+91-93090-85300",
   location: "Pune, India",
-  linkedin: "https://linkedin.com/in/tanvi-vilaskar",
+  linkedin: "https://www.linkedin.com/in/tanvi-vilaskar-1a905a263/",
   github: "https://github.com/Tanvi-vilaskar",
 };
 
